@@ -18,54 +18,71 @@
  
 Dropdown
 <details>
-<summary>Run sum1ton.c</summary>
+<summary>Sum of numbers from 1 to n</summary>
   
-+ Run sum1ton.c
++ Run sum_1_to_n.c
 ```
-gcc sum1ton.c
+gcc sum_1_to_n.c
 ./a.out
 ```
 </details>
+
+![sum1ton_c_compilation](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/9fc77570-4ffd-4e7a-a22e-59efdcb7ea79)
+
 <details>
 <summary>GCC compile modes and disassemble instruction comparison</summary>
-  
-+ GCC compile modes and disassemble instruction comparison
-  + Error encountered : stdio not recognised
-Solution
-```
-export PATH="/home/vboxuser/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH"
-```
-```
-riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
-#in a new terminal window
-riscv64-unknown-elf-objdump -d sum1ton.o
-```
-![o1bincom](https://github.com/Srini-web/pes_asic_class/assets/77874288/bce74458-6d4f-4562-a552-9222c9fadcf6)
 
++RISCV GCC compilation with O1 and | less
 ```
-riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
-#in a new terminal window
-riscv64-unknown-elf-objdump -d sum1ton.o
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum_1_to_n.o sum_1_to_n.c
+riscv64-unknown-elf-objdump -d sum_1_to_n.o | less
 ```
-![ofastbincom](https://github.com/Srini-web/pes_asic_class/assets/77874288/05d2aea1-4903-48f3-a6e5-da8d410779fb)
+![sum1ton_riscv_less_O1](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/0e82b3dd-8877-48fd-8238-2add78b885b2)
+
++RISCV GCC compilation with O1 main function
+
+![sum1ton_riscv_main_O1](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/aed450c1-53ac-4b83-9b75-6050ea1f0657)
+
++RISCV GCC compilation with Ofast and | less
+```
+riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum_1_to_n.o sum_1_to_n.c
+riscv64-unknown-elf-objdump -d sum_1_to_n.o | less
+```
+![sum1ton_riscv_less_Ofast](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/c79a4bb2-f93b-467e-b916-733dbd9e1ddf)
+
++RISCV GCC compilation with Ofast main function
+
+![sum1ton_riscv_main_Ofast](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/962086e0-0f05-4e02-8898-f80a4e1a9845)
+
 </details>
 <details>
-<summary> Spike simulation </summary>
+<summary> Spike simulation of sum of numbers from 1 to n</summary>
   
-+ Spike simulation
++ Spike simulation of the RISC V compiled program
+
+![sum1ton_spike](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/d3990f4b-453d-495d-bfdb-7540eea1f9e3)
+
++ Spike debugger
+
+![sum1ton_spike_debug](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/96e686fb-0be8-4e31-bf15-2a3e7ee160a4)
   
-  ![d1t3](https://github.com/Srini-web/pes_asic_class/assets/77874288/5a63c4d9-0086-48fb-aa95-d71c1c783e08)
 </details>
 <details>
 <summary>Finding the maximum and minimum values of a long long unsigned integer</summary>
   
 + Finding the maximum and minimum values of a long long unsigned integer
-    + Also finding out what happens when the value assigned is beyond the datatype range
-      
-  <img width="559" alt="usnmaxf" src="https://github.com/Srini-web/pes_asic_class/assets/77874288/cea84d41-2cfa-49e8-a999-ad6530e8dcd4">
+
+![unsigned](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/e150f2ac-1b6f-4dba-afbf-673412eee5be)
+
 </details>
+<details>
+<summary>Finding the maximum and minimum values of a long long signed integer</summary>
+  
++ Finding the maximum and minimum values of a long long signed integer
 
+![signed](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/3e57b1ac-a916-4819-92b5-9b7c1c27e5a3)
 
+</details>
 
 
 
