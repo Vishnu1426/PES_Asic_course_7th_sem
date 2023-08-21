@@ -1,5 +1,4 @@
-# PES_Asic_course_7th_sem
-# PES_ASIC_Class
+# PES_ASIC_RISCV_Course_7th_Sem
 
 ## Day 1 
 ### Instruction Set Architecture
