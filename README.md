@@ -1,6 +1,6 @@
 # PES_Asic_course_7th_sem
 # PES_ASIC_Class
-Name: Srinidhi B S        SRN: PES1UG20EC201 (VMSBS in the output stands for VM Srinidhi B S)
+
 ## Day1 
 ### Instruction Set Architecture
 + ISA defines the interface between a computer's hardware and its software, specifically how the processor and its components interact with the software instructions that drive the execution of tasks. It encompasses a set of instructions, addressing modes, data types, registers, memory organization, and the mechanisms for executing and managing instructions
