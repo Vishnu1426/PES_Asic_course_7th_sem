@@ -11,10 +11,49 @@
 
 ### Some RISCV Assemmbly Instructions leartn
 +LUI: Load Upper Immediate 
+
 ![LUI](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/28ee7cf1-99fd-4fb8-979e-5ddb95b0f8f4)
+
 +ADDI: Add immediate
+
 ![addi](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/5ff94dea-4d32-4943-b0ea-441e9196d299)
 
+### Some basic commands and brief explanation
++ RISCV GCC compilation
+~~~
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o <filename.o> <filename.c>
+~~~
+ + O1 -> will do normal compilation
+ + Ofast -> will do compilation in such a way that the number of lines in the assembly code is reduced
+
+```
+riscv64-unknown-elf-objdump -d <filename.o>
+riscv64-unknown-elf-objdump -d <filename.o> | less
+```
+ + /main -> will give you the main function's assembly code
+
++ Spike simulation
+```
+spike pk <filename.o>
+```
+ + This will give the output same as that obtained when ./<filename.o> is run
+
++ Spike Debugger
+```
+spilke -d pk <filename.o>
+```
+ + This will open debugger,  which can be used to do debugging which includes execution of assembly code lines manually
+```
+: until pc 0 100b0
+```
+ + This will run the assembly codes from 0 to 100b0 locations
+ + From 100b0 onwards it will enable us to run manually
+```
+: reg 0 a2
+```
+ + This will show the contents of the register a2. 0 means core 0
+ + Press enter to run the next instruction
+	
  
 Dropdown
 <details>
@@ -25,14 +64,13 @@ Dropdown
 gcc sum_1_to_n.c
 ./a.out
 ```
-</details>
-
 ![sum1ton_c_compilation](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/9fc77570-4ffd-4e7a-a22e-59efdcb7ea79)
+</details>
 
 <details>
 <summary>GCC compile modes and disassemble instruction comparison</summary>
 
-+RISCV GCC compilation with O1 and | less
++ RISCV GCC compilation with O1 and | less
 ```
 riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum_1_to_n.o sum_1_to_n.c
 riscv64-unknown-elf-objdump -d sum_1_to_n.o | less
