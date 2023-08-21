@@ -9,11 +9,11 @@
 + Signed numbers are numerical values that can represent both positive and negative magnitudes, along with zero.(Range : Positive : [0 , 2^(n-1)-1] Negative : [-1 to 2^(n-1)])
 
 ### Some RISCV Assemmbly Instructions leartn
-+ LUI: Load Upper Immediate 
++ lui: Load Upper Immediate 
 
 ![LUI](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/28ee7cf1-99fd-4fb8-979e-5ddb95b0f8f4)
 
-+ ADDI: Add immediate
++ addi: Add immediate
 
 ![addi](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/5ff94dea-4d32-4943-b0ea-441e9196d299)
 
