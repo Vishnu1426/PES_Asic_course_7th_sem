@@ -10,11 +10,11 @@
 + Signed numbers are numerical values that can represent both positive and negative magnitudes, along with zero.(Range : Positive : [0 , 2^(n-1)-1] Negative : [-1 to 2^(n-1)])
 
 ### Some RISCV Assemmbly Instructions leartn
-+LUI: Load Upper Immediate 
++ LUI: Load Upper Immediate 
 
 ![LUI](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/28ee7cf1-99fd-4fb8-979e-5ddb95b0f8f4)
 
-+ADDI: Add immediate
++ ADDI: Add immediate
 
 ![addi](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/5ff94dea-4d32-4943-b0ea-441e9196d299)
 
@@ -42,7 +42,7 @@ spike pk <filename.o>
 ```
 spilke -d pk <filename.o>
 ```
- + This will open debugger,  which can be used to do debugging which includes execution of assembly code lines manually
+ + This will open debugger,  which can be used to perform debugging which includes execution of assembly code lines manually
 ```
 : until pc 0 100b0
 ```
