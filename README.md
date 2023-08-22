@@ -54,7 +54,7 @@ spilke -d pk <filename.o>
  + Press enter to run the next instruction
 	
  
-Dropdown
+Expand the below dropdowns to know more
 <details>
 <summary>Sum of numbers from 1 to n</summary>
   
@@ -143,7 +143,7 @@ riscv64-unknown-elf-objdump -d sum_1_to_n.o | less
 
 ![Algorithm_Flowchart](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/57a66a6c-b305-4ebd-9263-8159e1e01486)
  
-Dropdown
+Expand the below dropdowns to know more
 <details>
 <summary>1_to_9_custom.c and load.S</summary>
   + Compilation and Execution of the two files are done using the RISCV GCC and Spike.
@@ -176,7 +176,7 @@ riscv64-unknown-elf-objdump -d 1_to_9_custom.o | less
 
 </details>
 
-Dropdown
+
 <details>
 	+ Diagram for flow of instruction and data from memory to processor
 	
