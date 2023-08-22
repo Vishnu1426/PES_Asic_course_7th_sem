@@ -178,8 +178,12 @@ riscv64-unknown-elf-objdump -d 1_to_9_custom.o | less
 
 
 <details>
-	+ Diagram for flow of instruction and data from memory to processor
-	
+	<summary>Diagram for flow of instruction and data from memory to processor</summary>
+
+ + Hex file containing C program goes to the RISC-V CPU.
+ + The CPU does the operation. CPU is written in verilog.
+ + It returns the output back to the C program.
+ + 
  ![Memory to Processer diagram](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/85b8c414-614a-4f18-b042-e1e6876e6c92)
 
 </details>
