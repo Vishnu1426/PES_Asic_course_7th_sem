@@ -1,37 +1,223 @@
-![Screenshot (273)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/f58f17f0-5e8a-4b3e-972e-141d1f5e281a)
-![Screenshot (272)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/d9e1b65c-14b3-40bd-a5de-34423e1180f3)
-![Screenshot (271)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/c9816b2f-85b6-42de-9bcc-839ea8735505)
-![Screenshot (270)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/0a79d62e-d95f-4a53-92fd-0e89d254e2e7)
-![Screenshot (269)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/e8a17666-7e0a-44f9-8da2-970e463af7fd)
-![Screenshot (268)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/d05701bf-3d4e-4fdf-9556-30ab36cf3fc2)
-![Screenshot (267)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/c17ea78d-329a-4152-a625-9149bc508dfc)
-![Screenshot (266)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/ab09c022-6ffe-459b-ad3a-9e22763709e8)
-![Screenshot (265)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/b281b6be-a7fa-4ad4-a625-41b13500c029)
-![Screenshot (264)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/170cdb99-564b-484e-8477-aee95161e6d5)
-![Screenshot (263)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/009bfdb3-7a08-41e7-b2cc-91f72e66108d)
-![Screenshot (262)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/77239e92-ca53-468e-b793-b81e002004d3)
-![Screenshot (251)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/899e06cb-1cb1-4aa2-b650-d7aed85824f8)
-![Screenshot (249)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/6f4174bc-585c-4265-84c3-b89044d177d4)
-![Screenshot (248)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/6053eab3-ebb7-45a4-b274-bccba267c90b)
-![Screenshot (247)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/35609273-c319-4cae-8572-b2b9eaa48c03)
-![Screenshot (229)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/b3c53910-0357-4522-bc33-297d862caa7e)
-![Screenshot (224)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/a1e40dbf-7cea-4900-9418-35fe051dbf28)
-![Screenshot (223)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/d3b7952f-53c5-4135-8768-265ccf8d069a)
-![Screenshot (222)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/c24d4596-b71b-4060-848a-4235db7e1e85)
-![Screenshot (221)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/f1f669c8-7dad-48cb-b0f9-a7a54b9b6901)
-![Screenshot (220)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/4a7a1440-b828-4d89-9cce-8efe64a2e264)
-![Screenshot (213)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/b6591bf8-9b31-4269-a3c3-0a602dce23ef)
-![Screenshot (212)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/1fedd7bb-86c9-4dab-a123-4efd61d80e76)
-![Screenshot (210)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/33a65848-acbb-4bbb-94a5-7604417aadce)
-![Screenshot (282)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/b37beef3-43b2-405c-a960-6c1599640766)
-![Screenshot (281)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/fa16f5b5-b156-4595-9ded-4ac3902123cf)
-![Screenshot (280)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/318affca-d923-43a8-ab87-89e9482d8050)
-![Screenshot (279)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/e883e7bd-8020-4cf0-b288-f20941a3b2bf)
-![Screenshot (278)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/00b7b8c6-a5e8-4649-9726-2af21232be8a)
-![Screenshot (277)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/90ca6585-cc15-4e41-8d4b-0560d3d1a320)
-![Screenshot (276)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/db7e2c82-95cf-4d24-b804-452396803e87)
-![Screenshot (275)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/7336c0b7-50e8-4a25-8fd4-736c3cddc7e9)
-![Screenshot (274)](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/c8b42d53-fa42-4209-bc24-b2ff318d5df4)
+# RTL DESIGN USING VERILOG WITH SKY130 TECHNOLOGY
+## Day 1 - Introduction to Verilog RTL design and Synthesis
+<details>
+<summary>Installations</summary><blockquote>
+<details>
+<summary>Tools Installation</summary><blockquote>
+	
++ Commands to install Yosys
+```
+git clone https://github.com/YosysHQ/yosys.git
+cd yosys
+sudo apt install make
+sudo apt-get update
+sudo apt-get install build-essential clang bison flex  libreadline-dev gawk tcl-dev libffi-dev git  graphviz xdot pkg-config python3 libboost-system-dev libboost-python-dev libboost-filesystem-dev zlib1g-dev
+make config-gcc
+make
+sudo make install
+```
+
++ Command to install iverilog
+```
+sudo apt-get install iverilog
+```
+
++ Command to install iverilog
+```
+sudo apt uptdate
+sudo apt install gtkwave
+```
+
+</blockquote></details>
+
+<details>
+<summary>Directory Creation and Cloning Source Files</summary><blockquote>
+
++ Go your working directory through root directory and execute the following commands
+```
+mkdir VLSI
+cd VLSI
+git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+```		
+<blockquote></details>
+</blockquote></details>
+
+<details>
+<summary>Exploring the cloned directories</summary><blockquote>
+
++ The following command will go the workshop directory
+```
+cd sky130RTLDesignAndSynthesisWorkshop/
+```
+
++ The following command will open the my_lib directory. This my_lib folder contains another folder called verilog_files, which contains all the model source files required for the lab experiments.
+``` 
+cd my_lib
+```
++ The following command if typed in VLSI folder will go the lib folder. This contains the sky130 tool's library definition file.
+```
+cd lib 
+```
++ Now let's check the working of iverilog
+```
+cd verilog_files
+iverilog good_mux.v tb_good_mux.v
+```
++ (an a.out file will be created.)
+```
+./a.out
+```
++ This will create a .vcd file and this we load it into gtkwave.
+```
+gtkwave tb_good_mux.vcd
+```
++ To open and check the files type
+```
+gvim tb_good_mux.v -o good_mux.v
+```
+</blockquote></details>
+
+<details>
+<summary>Introduction to Yosys and Logic synthesis</summary><blockquote>
+
++ Next we see yosys
++ Yosys takes in the design file and the library file and generates the netlist file
++ Netlist is basically the representaion of the design file in the form of standard cells.
++ read_verilog is used for reading the design file
++ read_liberty is used for reading the .lib file
++ write_verilog is used for writing the netlist file
++ The netlist and the testbench file is sent to iverilog and that generates an a.out which when run we get a .vcd file. This .vcd file when we send to gtkwave we get the simulation waveform.
++ This waveform should be same as RTL simulation. RTL simulation did not use standard cells. But in this netlist we used standard library files. Since design is same we should get the same output.
++ Primary inputs and primary outputs have not changed. Therefore, we can use the same testbench for both 
+synthesis and RTL simulation.
+
++ RTL design - is the behavioural representation of the required specification in HDL language.
++ But we don't need representation of behaviour in terms of code. We need hardware
++ So for that we use RTL to Gate level translation. This translation is called synthesis.
++ The design is converted into gates and the connections are made between the gates. 
++ This file which contains these gates and their connections is called netlist.
+	
++ .lib is a library file which is a collection of standard cells/ logical modules. It can contain differnt flavours of the same gate.(slow, medium, fast)
++ Why do we need different flavours of the same gate? Combinational delay determines the maximum speed of	operation. We need fast cells so that the combination delay is less and the circuit can work at a higher clock rate.
++ But why do we need a slow clock? Say there is a circuit with two FlipFlops (ffa and ffb) and in between them we have a combinational circuit. ffb must capture the data from the previous cycle of ffa.
++ That is when ffa sends its data through comb circuit in one cycle, in the next cycle ffb should capture the data. So there should be a minimum delay, so that data can be transfered safely. Combinational circuit must create that delay such that until ffb finishes capturing the previously sent data, the output should not be updated. This is called hold time. That is why we also need cells which work slowly.
++ Wider transistors are gonna be faster but they consume more area and power. Thinner cells are gonna be slower but they consume lesser area and are more energy efficient.
++ The guidance offered to the synthesizer to put the right kind of delays are called constraints. The constraints are put in a constraints file.
+
+</blockquote></details>	
+
+<details>
+<summary>Labs using Yosys and Sky130 PDKs</summary><blockquote>
+
++ Open Yosys
+```
+yosys
+```
++ Read the library definition file
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
++ Read the verilog file to be synthesized
+```
+read_verilog good_mux.v
+```
++ Synthesize the top level module using its name
+```
+synth -top good_mux 
+```
++ The following command basically realises the synthesised top module good_mux in terms of standard cell library available in the lib folder.	
+```
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
++ The following command opens the graphviz file to show the synthesized design in terms of block diagram.
+```
+show
+```
++ Generate a netlist file for the above synthesized design. We can view the synthesized design directly using notepad.
+```
+write_verilog good_mux_netlist.v 
+```
++ To get a concise version of the netlist.
+```
+write_verilog -noattr good_mux_netlist.v
+```
+</blockquote></details>	
+
+## Day 2 - Timing libs, Hierarchical vs Flat Synthesis and efficient flop coding styles.
+<details>
+<summary>Theory</summary>summary><blockquote>
+<details>
+<summary>PVT</summary><blockquote>
+	
++ P - Process => Changes in chip due to the small variablity in the manufacturing process.
++ V - Voltage => Changes in the voltage.
++ T - Temeperature => Changes in the external temperature. 
+</blockquote></details>
+<details>
+<summary>Library File (.lib)</summary><blockquote>
+
++ .lib file contains every cell and the cell properties like leakage power, delay etc.
+</blockquote></details>
+</blockquote></details>
+
+<details>
+<summary>Hierarchical vs Flat synthesis</summary><blockquote>
+
+<details>
+<summary>multiple_modules.v</summary>
+	
++ Open Yosys and perform the synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_modules.v
+synth -top multiple_modules
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/f9ce00a6-69ba-4ad2-bbcf-94fe199cdda3)
+```
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib	
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/4724ce7e-46c1-4d67-a44b-25b69379e421)
+```
+show
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/8aa63c02-8a8c-47e8-898f-4fae792ac024)
+```
+write_verilog multiple_modules_heir.v
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/0136a72c-d4d0-4d8b-9596-c9c0a02e5449)
+
++ Flatten - Makes the module such that there are no sub modules in the netlist file. and gate and or gate are directly instantiated.
+```
+flatten
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/15049411-aba3-404f-960e-9a79e9fb3b94)
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/f0268c96-76da-403d-864a-5af23a367cff)
+
+</details>
+
+<details>
+<summary>Synthesizing Submodules</summary>
+	
++ Now given multile modules, we want to synthesize a submodule, what to do?
++ Start yosys again and do till read_verilog
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_modules.v
+```
++ Now we need to synthesize only submodule1
+```
+synth -top submodule1
+```
+</details>
+
+<details>
+<summary>Why do we need module level synthesis?</summary>
+
++ Module level synthesis is preferred when multiple instances of the same module is present. We won't have to synthesize and check every module, because it is goint to be the same.
++ Divide and conquer - If we have a massive design, the tool may not be able to do all the synthesis properly. So we do submodule level synthesis and then get individual netlist and then stitch them together in the top module.
+</details>
+
+
 
 
 synth -top mul2 output
