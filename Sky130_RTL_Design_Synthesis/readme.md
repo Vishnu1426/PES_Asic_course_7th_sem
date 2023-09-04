@@ -148,3 +148,30 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/8b86aa8c-9cc3-450d-b44f-444183c03832)
 show
 ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/ea2ba0b6-85f6-4bc7-9f64-1361c2fe983e)
+
+
+
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog counter_opt.v
+synth -top counter_opt
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/8f0d4aa5-e84f-426e-bcf0-d045efa684fb)
+dfflibmap ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/0763e414-4c7a-4a06-98a8-a82e231d6b28)
+show
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/fd8baa0a-6648-4899-a5a2-09294d333e53)
+
+Experimenting with the counter_opt.v
+Using all three bits of the counter
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/5f0e5277-a35d-4d83-b0c4-bcedcaae82d6)
+yosys
+	read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+	read_verilog counter_opt2.v
+	synth -top counter_opt
+ ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/ad37c007-ecff-413c-b661-2a350ced30e1)
+	Since there are dffs
+	dfflibmap ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+	abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+	show
+ ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/1a5c80f5-dfe2-49a9-9e0b-5969f3aa4e42)
