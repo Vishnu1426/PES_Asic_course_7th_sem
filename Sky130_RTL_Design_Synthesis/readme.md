@@ -36,4 +36,115 @@
 
 synth -top mul2 output
 ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/44efda31-08fa-456a-89b7-1eaa9514bb1f)
+No of cells in the synthesis output is 0
 
+show (mul2)
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/b77faa6b-8a65-4cf4-a61d-a3e6b13f7840)
+
+write_verilog -noattr mult_2_net.v
+!gvim mult_2_net.v
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/e4fdaf35-e8bd-4d9c-82f3-807224ccdcd7)
+
+read_verilog mult_8.v
+synth -top mult8
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/0196bee8-7cdf-4b3c-a99a-44b068971326)
+No of cells in the synthesis output is 0
+show
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/e5b0a3f9-1fd6-4332-a9cc-bcb53b1ad686)
+write_verilog -noattr mult8_net.v
+!gvim mult8_net.v
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/ac2d334f-ef75-4876-9435-25d0aaba97ee)
+
+
+
+
+
+
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog opt_check.v
+synth -top opt_check
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/22d07c7f-9a8f-4c0a-9f8d-1618de38b333)
+opt_clean -purge
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/05e0e289-3f50-48a4-ba02-d7c229d21937)
+ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/5bad624d-4670-4f84-bc04-97938bae335f)
+show
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/1416eb1b-ca9d-424f-abe8-62ac849dc17f)
+
+read_verilog opt_check2.v	
+synth -top opt_check2
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/88762908-92b5-4edb-ae86-adce8f06879d)
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib	
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/6e8ca5c4-c379-4581-9d14-f8f22d0967c4)
+show
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/228ef8e4-ba69-4052-a532-3c9010323a7b)
+
+
+read_verilog opt_check3.v
+synth -top opt_check3
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/0885eb7e-1633-400e-b9bf-c4c0cc1c677f)
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/432b099a-f463-4fd5-8d50-0020dd18f76d)
+show
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/e254c37f-e328-44c8-b744-816eb7cce7e4)
+
+
+
+iverilog dff_const1.v tb_dff_const1.v
+./a.out
+gtkwave tb_dff_const1.vcd
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/262685d9-0c40-4416-8fee-b7f6ae465f66)
+iverilog dff_const2.v tb_dff_const2.v
+./a.out
+gtkwave tb_dff_const2.vcd
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/966ad2a5-8324-44f3-bfe3-13e948048cc3)
+
+
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const1.v
+synth -top dff_const1
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/bb00ab0b-5e76-4d62-bd13-9d7058b5878b)
+This synthesis infers a flop
+
+dfflibmap ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/d31dd76b-c8de-4134-bb05-273f86b4c238)
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/14dea5ac-0d89-43d7-a92e-8dec15fd48e1)
+show
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/06f36d91-ecac-4f64-8306-92b3da435cb9)
+
+
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const2.v
+synth -top dff_const2
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/24b86bf4-72fa-4c57-8d8a-64a0883377f3)
+This design does not infer flop
+
+Since there are dffs
+dfflibmap ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/6a79119a-0320-451d-b174-9bc0d56ffc9c)
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/f8acce45-ca08-4e80-a2ae-570ba6617a98)
+
+iverilog dff_const3.v tb_dff_const3.v
+./a.out
+gtkwave tb_dff_const3.vcd
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/85f08ceb-bcc9-430c-9222-0ee93dafbc09)
+
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const3.v
+synth -top dff_const3
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/7fe6a41d-0ff9-45a8-8035-5739b09c17dc)
+It can be seen that both the flip flops are there in the synthesized design.
+dfflibmap ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/a9804fb4-1fb0-4cd1-9d32-07e01e8fbe4c)
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/8b86aa8c-9cc3-450d-b44f-444183c03832)
+show
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/ea2ba0b6-85f6-4bc7-9f64-1361c2fe983e)
