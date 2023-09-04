@@ -208,6 +208,14 @@ read_verilog multiple_modules.v
 ```
 synth -top submodule1
 ```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/8e98a19a-3839-4001-b87a-61469033aae1)
+
++ Synthesized design
+```
+show
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/42fa2404-3abc-4e97-abd0-b7ebb25e6091)
+
 </details>
 
 <details>
@@ -216,34 +224,262 @@ synth -top submodule1
 + Module level synthesis is preferred when multiple instances of the same module is present. We won't have to synthesize and check every module, because it is goint to be the same.
 + Divide and conquer - If we have a massive design, the tool may not be able to do all the synthesis properly. So we do submodule level synthesis and then get individual netlist and then stitch them together in the top module.
 </details>
+</details>
+
+<details>
+<summary>Flip  Flops</summary><blockquote>
+	
+<details>
+<summary>Why do we need flip flops?</summary><blockquote>
+
++ Combinational circuits even though they are designed properly and will settle at the right ouput if the inputs are right, they might momentarily induce wrong values at the output. This is called glitch.
++ Now if this output is connected directly to another comb circuit, the next combinational circuit not only gets changing values and starts giving output in its end, but also creates its own glitches.
++ In this way glitch propagates. To prevent this, we store the values after every combinational block. The next block takes value from the flip flop. The input of the flip flop may be changing, but the output will be stable/constant since the flop's values changes only when clk signal is given. Therefore, the next comb circuit will see a stable input. 
+
+</blockquote></details>
+</blockquote></blockquote>
+</details>
+
+<details>
+<summary>Resets</summary><blockquote>
+
+<details>
+<summary>Theory</summary><blockquote>
+
++ Asynchronous reset - A reset signal of a storage element, which does not depend on the clock signal.
++ Synchronous reset - A reset signal of a storage element, which depends on the clock signal. It is going to wait for the clock. When we say something is synchronous, that means there is no separate pin for that signal.
++ Synchronous reset goes directly to the input where a reset signal selectes a mux which determines whether the input to the storage element is a predetermined reset values or the value passing from the previous combinational block.
++ We can also have a flop with both synchronous and asynchronous reset.
+</blockquote></details>
+
+<details>
+<summary>Asynchrocnous reset module RTL synthesis</summary><blockquote>
+
++ Type the following code in the home directory.
+```
+sudo -i
+```
++ Go to the verilog_files directory and type in the following
+```
+iverilog dff_asyncres.v tb_dff_asyncres.v
+./a.out
+gtkwave tb_dff_asyncres.vcd
+```
+
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/56c18d89-ba69-4076-8b30-338190c9ed1c)
+
+</blockquote>
+</details>
+
+<details>
+<summary>Asynchrocnous set module RTL synthesis</summary><blockquote>
+
++ Type the following code in the home directory.
+```
+sudo -i
+```
++ Go to the verilog_files directory and type in the following
+```
+iverilog dff_async_set.v tb_dff_async_set.v
+./a.out
+gtkwave tb_dff_async_set.vcd
+```
+
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/da74852e-2924-4fbd-9a7d-25c7e1983679)
+
+</blockquote>
+</details>
+
+<details>
+<summary>Synchrocnous reset module RTL synthesis</summary><blockquote>
+
++ Type the following code in the home directory.
+```
+sudo -i
+```
++ Go to the verilog_files directory and type in the following
+```
+iverilog dff_syncres.v tb_dff_syncres.v
+./a.out
+gtkwave tb_dff_syncres.vcd
+```
+
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/7c5b5547-0c3c-457f-ba39-ca45caed4f2f)
+
+</blockquote>
+</details>
+
+<details>
+<summary>Asynchrocnous reset module standard cell synthesis</summary><blockquote>
+
++ Type the following code in the verilog_files directory.
+```
+yosys
+```
++ In Yosys type in the following
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_asyncres.v
+synth -top dff_asynchres
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/a423ab64-94ce-4a54-80e6-a53b52e29c91)
+
++ Sometimes the dffs use a different library than gates, so we will have to specify that. But here both are same so same std. lib file.
+```
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/157f0504-8015-4665-be5d-ff94cca313b2)
+
+```
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib	
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/11b948ff-8790-4b37-a126-0b3953d144ef)
+
+```
+show
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/e4857056-b149-4535-aec3-8c580c8e444a)
+
+</blockquote>
+</details>
 
 
+<details>
+<summary>Asynchrocnous set module standard cell synthesis</summary><blockquote>
 
++ Type the following code in the verilog_files directory.
+```
+yosys
+```
++ In Yosys type in the following, similar to the previous one and obtain the design.
+```
+read_verilog dff_async_set.v
+synth -top dff_async_set
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/393d0956-9d89-44db-8fc2-4bb71d38ee2e)
 
-synth -top mul2 output
+</blockquote>
+</details>
+
+<details>
+<summary>Synchrocnous set module standard cell synthesis</summary><blockquote>
+
++ Type the following code in the verilog_files directory.
+```
+yosys
+```
++ In Yosys type in the following, similar to the previous one and obtain the design.
+```
+read_verilog dff_syncres.v
+synth -top dff_syncres
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/ee5ecdb3-9171-4dbe-9c10-87b2b2c2bc03)
+```
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/a5770e57-7fa2-4343-aafb-d4c01e470fb2)
+
+</blockquote>
+</details>
+</blockquote></details>
+
+<details>
+<summary>Multiplication by 2 - An Interesting Optimisation</summary><blockquote>
+
++ Let's synthesize and see how the output is calculated and we get and how many cells we get
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog mult_2.v
+synth -top mul2
+```
 ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/44efda31-08fa-456a-89b7-1eaa9514bb1f)
-No of cells in the synthesis output is 0
 
-show (mul2)
++ We can see above that the No. of cells in the synthesis output is 0
++ Let's see the design below.
+```
+show
+```
 ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/b77faa6b-8a65-4cf4-a61d-a3e6b13f7840)
 
++ Let us generate the netlist and see why the number of cells are zero.
 write_verilog -noattr mult_2_net.v
 !gvim mult_2_net.v
 ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/e4fdaf35-e8bd-4d9c-82f3-807224ccdcd7)
 
++ It can be seen from the netlist file that Multiplying by powers of two is like appending zeroes at the LSB position of binary representation or left shifting the binary representation. Therefore there is no requirement of any cells, i.e., no requirement of any gates.
++ Now if we have to multiply a 3 bit number a[2:0]*9, we can do a[2:0]*8 + a[2:0].
++ a[2:0] is basically a000. Since a is also a 3 bit number, we get a000 + a = a[2:0]a[2:0].
++ This is another kind of optimisation.
+</blockquote></details>
+
+<details>
+<summary>Multiplication by 8 - An Interesting Optimisation</summary><blockquote>
+
++ After doing the same operations as before
+```
 read_verilog mult_8.v
 synth -top mult8
+```
 ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/0196bee8-7cdf-4b3c-a99a-44b068971326)
-No of cells in the synthesis output is 0
+
++ It can be seen that the No. of cells in the synthesis output is 0
++ Let us see the design
+```
 show
+```
 ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/e5b0a3f9-1fd6-4332-a9cc-bcb53b1ad686)
+
++ Let us write the netlist file
+```
 write_verilog -noattr mult8_net.v
 !gvim mult8_net.v
+```
 ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/ac2d334f-ef75-4876-9435-25d0aaba97ee)
+</blockquote>
+</details>
 
+## Day 3 - Combinational and sequential optmizations
 
+<details>
+<summary>Types and benefits of Combinational Logic Optimisation</summary>
 
++ Squeezning the logic to ge the most optimised design - Area and power savings
++ Constant Propagation - Direct Optimisation. This means when a constant value simply propagates from input to the output through many gates and if those many number of gates are not required to propagate the constant or do minimal operation, we can substitute it with a smaller gate/gates.
++ Boolean Logic Optimisation - Reduces number of gates using K-Map and Quine McKluskey
++ Synthesis tools do these optimisations to get the most optimised logic design.
+</details>
 
+<details>
+<summary>Types and benefits of Sequential Logic Optimisation</summary><blockquote>
+
+<details>
+<summary>Basic</summary>
+
++ Sequential constant propagation - Assume a Reset DFF where D is connected to ground. Is there any chance where Q will become 1? No. Therefore, Q is always 0. What if set DFF is there. This time Q will become 0 when set is not enabled and will be 1 when set is enabled.
+</details>
+
+<details>
+<summary>Advanced</summary><blockquote>
+	
++ State optimisation - Optimisation of unused states
++ Cloning - Physical aware synthesis. That is say a combinational logig gets input from an FFA and its output goes to two other FFs (FFB and FFc), and these two output FFs are far off, then a long routing is required. To prevent this we can clone the path from FFA to FFB such that there is now FFA1 - Comb - FFB and FFA2 - Comb - FFC. 
+
+<details>
+<summary>Retiming</summary>
+	
++ Say there is a cascade of FFA-comb1-FFB-comb2-FFC. Now if comb1 is having a much greater delay than comb2, then the circuit's clock can effectively work only at the comb1's speed since it creates a bottleneck. 
++ But say if we were able to move some part of the combinational logic from comb1 to comb2, this would mean that we have pushed some amount of delay from comb1 to comb2. 
++ Now since the difference in their delays was large, transfering a small delay from comb1 to comb2 will still keep comb1 slower than comb2 an effectively comb1's speed only will be used. 
++ But comb1 is now faster since it has lesser delay.
++ So we have retimed the delays so that we get an optimised circuit in terms of timing.
+</details>
+</blockquote></details>
+</blockquote></details>
 
 
 yosys
