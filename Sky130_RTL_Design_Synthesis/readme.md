@@ -64,17 +64,24 @@ cd verilog_files
 iverilog good_mux.v tb_good_mux.v
 ```
 + (an a.out file will be created.)
++ This will create a .vcd (Value change dump) file.
 ```
 ./a.out
 ```
-+ This will create a .vcd file and this we load it into gtkwave.
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/3db96576-fd81-4a42-9801-78b637745700)
+
++ We will load this .vcd file into gtkwave.
 ```
 gtkwave tb_good_mux.vcd
 ```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/ddc77487-c83b-412a-8418-2d828a9d68b9)
+
 + To open and check the files type
 ```
 gvim tb_good_mux.v -o good_mux.v
 ```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/2ce76c92-fe4e-48f4-8b71-c53749bbc93f)
+
 </blockquote></details>
 
 <details>
@@ -113,26 +120,38 @@ synthesis and RTL simulation.
 ```
 yosys
 ```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/78b46928-1ed5-4b9f-88cd-fba9979a069c)
+
 + Read the library definition file
 ```
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/69336051-9785-4329-acb7-bc6028fc71af)
+
 + Read the verilog file to be synthesized
 ```
 read_verilog good_mux.v
 ```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/60462e4e-b18a-49a3-bd23-b534e6a55525)
+
 + Synthesize the top level module using its name
 ```
 synth -top good_mux 
 ```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/68976052-ca49-4c0f-aeea-19a25d068cf3)
+
 + The following command basically realises the synthesised top module good_mux in terms of standard cell library available in the lib folder.	
 ```
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/d2a7a0ff-e258-4dee-9215-cda5d95b0a03)
+
 + The following command opens the graphviz file to show the synthesized design in terms of block diagram.
 ```
 show
 ```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/10045abe-bf03-41a1-9a24-de4e9f859469)
+
 + Generate a netlist file for the above synthesized design. We can view the synthesized design directly using notepad.
 ```
 write_verilog good_mux_netlist.v 
@@ -253,7 +272,7 @@ show
 </blockquote></details>
 
 <details>
-<summary>Asynchrocnous reset module RTL synthesis</summary><blockquote>
+<summary>Asynchrocnous reset module RTL simulation</summary><blockquote>
 
 + Type the following code in the home directory.
 ```
@@ -272,7 +291,7 @@ gtkwave tb_dff_asyncres.vcd
 </details>
 
 <details>
-<summary>Asynchrocnous set module RTL synthesis</summary><blockquote>
+<summary>Asynchrocnous set module RTL simulation</summary><blockquote>
 
 + Type the following code in the home directory.
 ```
@@ -291,7 +310,7 @@ gtkwave tb_dff_async_set.vcd
 </details>
 
 <details>
-<summary>Synchrocnous reset module RTL synthesis</summary><blockquote>
+<summary>Synchrocnous reset module RTL simulation</summary><blockquote>
 
 + Type the following code in the home directory.
 ```
@@ -562,7 +581,7 @@ show
 <summary>Constant Propagation</summary><blockquote>
 
 <details>
-<summary>RTL synthesis of dff_const1.v</summary>
+<summary>RTL simulation of dff_const1.v</summary>
 	
 ```
 iverilog dff_const1.v tb_dff_const1.v
@@ -570,7 +589,11 @@ iverilog dff_const1.v tb_dff_const1.v
 gtkwave tb_dff_const1.vcd
 ```
 ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/262685d9-0c40-4416-8fee-b7f6ae465f66)
+</details>
 
+<details>
+<summary>RTL simulation of dff_const2.v</summary>
+	
 ```
 iverilog dff_const2.v tb_dff_const2.v
 ./a.out
@@ -651,6 +674,7 @@ read_verilog dff_const3.v
 synth -top dff_const3
 ```
 ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/7fe6a41d-0ff9-45a8-8035-5739b09c17dc)
+
 + It can be seen that both the flip flops are there in the synthesized design.
 + Since there are dffs
 ```
@@ -728,3 +752,23 @@ show
 
 ## Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
+<details>
+<summary>GLS</summary><blockquote>
+
+<details>
+<summary>What is GLS?</summary>	
+
++ It is basically running the testbench with netlist as the design under test.
++ Since netlist is logically same as the RTL code, the same testbench will only run it.
+</details>
+
+<details>
+<summary>Why GLS?</summary>
+
++ To verify the correctness of the design after synthesis, because when we convert from ideal cells to standard library cells, some errors may occur.
++ This is called Synthesis-Simulation mismatch.
++ We will see later why it is required to validate the functionality of the netlist.
++ To ensure that the timing of the design is met.
++ Only if the Gate level models are time annotated, we can use GLS for timing verification.
+</details>
+<>
