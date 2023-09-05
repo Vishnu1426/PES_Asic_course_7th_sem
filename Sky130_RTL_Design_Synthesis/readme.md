@@ -765,10 +765,116 @@ show
 <details>
 <summary>Why GLS?</summary>
 
-+ To verify the correctness of the design after synthesis, because when we convert from ideal cells to standard library cells, some errors may occur.
++ To verify the correctness of the design after synthesis, because when we write codes, we may not have written it properly and also when we convert from ideal cells to standard library cells, some errors may occur.
 + This is called Synthesis-Simulation mismatch.
 + We will see later why it is required to validate the functionality of the netlist.
 + To ensure that the timing of the design is met.
 + Only if the Gate level models are time annotated, we can use GLS for timing verification.
 </details>
-<>
+
+<details>
+<summary>Synthesis-Simulation Mismatch</summary>
+
+The points to understand while talking about Synthesis Simulation Mismatch are:
++ Missing Sensitivity List - If certain inputs required for the proper functioning of the circuit are not present in the sensiticity list, then the synthesized hardware might not be the intended circuit.
++ Blocking vs Non Blocking Statements - Blocking statements are executed in order, whereas non-blocking statements are executed parallely. If the order is not maintained in blocking statemenents, certain required parts of the synthesized design would be absent.
++ Non Standard Verilog Coding - Sequential circuits should be described using non-blocking statements only. Use blocking statements with atmost care and use only when needed.
+</details>
+</details>
+
+<details>
+<summary>ternary_operator_mux.v</summary>
+
++ Contents of the files
+```
+gvim ternary_operator_mux.v -o bad_mux.v -o good_mux.v
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/89f1b433-c7b5-404c-9a1d-cfaf1fd51f91)
+
++ RTL Simulation
+```
+iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+```
+ ![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/46e5c501-1b26-428d-9ea7-fb8f575e384b)
+
++ Synthesis
+```
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog ternary_operator_mux.v
+synth -top ternary_operator_mux
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/6b269872-ca1f-48e3-be1c-97f58237c17f)
+```
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr ternary_operator_mux_net.v
+show
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/221bdf08-ba24-4e7a-bc9c-f80f94917890)
+
+
++ GLS
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+gtkwave tb_ternary_operator_mux.vcd
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/c509b0f7-9ac4-4679-9b80-bc03dd8312b8)
+
+</details>
+<details>
+<summary>bad_mux.v</summary>
+	
++ RTL simulation of bad_mux.v
+```
+iverilog bad_mux.v tb_bad_mux.v
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/84693ce2-d5b5-4e0c-a4d1-e630e29f9c65)
+
++ Netlist simulation
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/80016862-eab2-40b6-bb20-953bcc67a4ae)
+
+</details>
+
+<details>
+<summary>blocking_caveat.v</summary>
+
++ RTL simulation
+```
+iverilog blocking_caveat.v tb_blocking_caveat.v
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/4604fdd3-62b8-46b6-b316-6339f699d912)
+
++ Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog blocking_caveat.v
+synth -top blocking_caveat
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/b54dbfa0-a6d8-4b5d-b9d4-a68f80098b3d)
+```
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr blocking_caveat_net.v
+show
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/e1746eb9-4176-4686-a5b3-a7d1304b1d46)
+
++ GLS
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+![image](https://github.com/Vishnu1426/PES_Asic_course_7th_sem/assets/79538653/5cea8607-78a6-4a3c-b4c9-38ffba57bed0)
+
+</details>
