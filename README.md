@@ -301,7 +301,7 @@ synthesis and RTL simulation.
 + Why do we need different flavours of the same gate? Combinational delay determines the maximum speed of	operation. We need fast cells so that the combination delay is less and the circuit can work at a higher clock rate.
 + But why do we need a slow clock? Say there is a circuit with two FlipFlops (ffa and ffb) and in between them we have a combinational circuit. ffb must capture the data from the previous cycle of ffa.
 + That is when ffa sends its data through comb circuit in one cycle, in the next cycle ffb should capture the data. So there should be a minimum delay, so that data can be transfered safely. Combinational circuit must create that delay such that until ffb finishes capturing the previously sent data, the output should not be updated. This is called hold time. That is why we also need cells which work slowly.
-+ Wider transistors are gonna be faster but they consume more area and power. Thinner cells are gonna be slower but they consume lesser area and are more energy efficient.
++ Wider transistors are going to be faster but they consume more area and power. Thinner cells are gonna be slower but they consume lesser area and are more energy efficient.
 + The guidance offered to the synthesizer to put the right kind of delays are called constraints. The constraints are put in a constraints file.
 
 </blockquote></details>	
